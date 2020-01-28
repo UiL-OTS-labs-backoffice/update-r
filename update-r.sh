@@ -1,8 +1,8 @@
-!/bin/bash
-
- This will update R from 3.4 to 3.6
-
- Ty Mees (T.D.Mees@uu.nl) 2019-12-03
+#!/bin/bash
+#
+# This will update R from 3.4 to 3.6
+#
+# Ty Mees (T.D.Mees@uu.nl) 2019-12-03
 
 set -e
 
@@ -53,7 +53,7 @@ echo "Updating Apt"
 apt update &> /tmp/update-r-update-apt-step.log
 
 echo "Installing R related dependencies"
-apt install libcurl4-openssl-dev libxml2-dev -y &> /tmp/update-r-install-dependencies-step.log
+apt install libcurl4-openssl-dev libssl-dev libxml2-dev -y &> /tmp/update-r-install-dependencies-step.log
 
 echo "Installing R"
 apt install r-base-dev -y &> /tmp/update-r-install-R-step.log
